@@ -8,12 +8,28 @@ public class ListNode { //M NACCACHE
     private int phoneNum;
     protected ListNode next;
     
-    protected ListNode (String fName, String lName, String address, int phoneNum) { //To make a ListNode object
+    protected ListNode (String fName, String lName, String address, int phoneNum, ListNode next) { //To make a ListNode object
         this.fName = fName; //sets each class-level variable to the one just given to the class
         this.lName = lName;
         this.address = address;
         this.phoneNum = phoneNum;
-        this.next = null;
+        this.next = next;
+    }
+
+    protected void setFName (String fName) { //changes fName
+        this.fName = fName;
+    }
+
+    protected void setLName (String lName) { //changes lName
+        this.lName = lName;
+    }
+
+    protected void setAddress (String address) { //changes address
+        this.address = address;
+    }
+
+    protected void setPhoneNum (int phoneNum) { //changes phoneNum
+        this.phoneNum = phoneNum;
     }
 
     protected String getFirstName () { //to access the person's first name
@@ -32,7 +48,7 @@ public class ListNode { //M NACCACHE
         return phoneNum;
     }
 
-    protected ListNode next () {
+    protected ListNode next () { //points in the linked list
         return next;
     }
 
