@@ -1,16 +1,19 @@
 package Lab5;
+//import java.util.*;
 
-public class ListNode {
+public class ListNode { //M NACCACHE
     private String fName; //stores all the class-level variables
     private String lName;
     private String address;
     private int phoneNum;
+    protected ListNode next;
     
     protected ListNode (String fName, String lName, String address, int phoneNum) { //To make a ListNode object
         this.fName = fName; //sets each class-level variable to the one just given to the class
         this.lName = lName;
         this.address = address;
         this.phoneNum = phoneNum;
+        this.next = null;
     }
 
     protected String getFirstName () { //to access the person's first name
@@ -27,6 +30,10 @@ public class ListNode {
 
     protected int getPhoneNumber () { //to access the person's phone number
         return phoneNum;
+    }
+
+    protected ListNode next () {
+        return next;
     }
 
     @Override
